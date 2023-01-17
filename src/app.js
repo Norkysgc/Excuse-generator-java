@@ -9,27 +9,19 @@ window.onload = () => {
   document.getElementById("excuse").innerHTML = generateExcuse();
 };
 let generateExcuse = () => {
-  let pronoun = ["A", "The"];
-  let subject = ["jogger", "racoon", "driver", "comedian", "pincone"];
-  let action = ["took my", "threw my", "yelled at my", "solete my", "bit my"];
-  let possetion = ["homework", "toe", "car", "shoe"];
-  let where = ["on the street", "in my house", "in my driveway"];
+  let who = ["the dog", "my granma", "his turtle", "my bird"];
+  let what = ["eat", "pissed", "crushed", "broked"];
+  let when = [
+    "before the class",
+    "right in time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
 
-  let proIndex = Math.floor(Math.random() * pronoun.length);
-  let subjIndex = Math.floor(Math.random() * subject.length);
-  let possetionIndex = Math.floor(Math.random() * action.length);
-  let actionIndex = Math.floor(Math.random() * possetion.length);
-  let whereIndex = Math.floor(Math.random() * where.length);
+  let whoIndex = Math.floor(Math.random() * who.length);
+  let whatIndex = Math.floor(Math.random() * what.length);
+  let whenIndex = Math.floor(Math.random() * when.length);
 
-  return (
-    pronoun[proIndex] +
-    " " +
-    subject[subjIndex] +
-    " " +
-    action[actionIndex] +
-    " " +
-    possetion[possetionIndex] +
-    " " +
-    where[whereIndex]
-  );
+  return who[whoIndex] + " " + what[whatIndex] + " " + when[whenIndex];
 };
